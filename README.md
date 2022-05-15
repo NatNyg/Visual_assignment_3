@@ -11,7 +11,7 @@ I then use keras from tensorflow to define the model and that I don't want the t
 ### Usage
 In order to reproduce my results, a few steps has to be followed:
 
-1) Install the relevant packages - the list of the prerequisites for each script can be found in the requirements.txt
+1) Install the relevant packages - the list of the prerequisites for the script can be found in the requirements.txt
 2) Make sure to place the script in the "src" folder. The data used in my code (cifar10) is fetched from tensorflow using the load_data() so nothing has to go into the in-folder. Had you wanted to use the script on a similar dataset, you would have to change up the loading of the data part of the script and place the data in the in folder. For this script using the cifar10 dataset, however, the "in" folder is redundant.
 3) Run the script from the terminal. 
 
