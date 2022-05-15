@@ -19,8 +19,8 @@ This should give you the same results as I have gotten in the "out" folder.
 
 
 ### Results
-The results of this script is actually not as good as I would have expected. With a maximum of 
-This could be a matter of redefining the parameters (e.g. learning rate, batch size, etc.), in order to optimize the model. This is something that could be fiddled around with, in order to find the most optimal parameters for the model performance. 
+The results of this script is actually not as good as I would have expected. With a maximum precision score of 63% on the frog and a minimum of 37% on cat this doesn't seem like the most perfect classification tool.  
+This could be a matter of redefining the parameters (e.g. learning rate, batch size, etc.), in order to optimize the model. This is something that could be fiddled around with, in order to find the most optimal parameters for the model performance. Also, I am only running it for 10 epochs - if this number was extended the results could also potentially increase in accuracy. 
 Looking at the saved plots of the accuracy and loss for the train and test data compared, however, this looks pretty good. This can be read from the plots by looking at how close the plot for the train- and test data is to each other - for my plots they are almost identical, which means that the model is neither over- nor underfitting, which is great! 
 
 
