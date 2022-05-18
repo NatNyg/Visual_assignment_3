@@ -21,7 +21,7 @@ This should give you approximately the same results as I have gotten in the "out
 ### Results
 The results of this script is actually not as good as I would have first expected. With a maximum precision score of around 60% and a minimum of around 40%  this doesn't seem like the most perfect classification tool.
 This could be a matter of redefining the parameters (e.g. learning rate, batch size, etc.), in order to optimize the model. This is something that could be fiddled around with, in order to find the most optimal parameters for the model performance. Also, I am only running it for 10 epochs - if this number was extended the results could also potentially increase in accuracy. Bearing in mind that we are classifying on ten labels though, the accuracy is pretty good.
-Looking at the saved plots of the accuracy and loss for the train and test data compared, this looks pretty solid. This can be read from the plots by looking at how close the plotted curve for the train- and test data is to each other - for my plots they are almost identical, which means that the model is neither over- nor underfitting, which is great! 
+Looking at the saved plots of the accuracy and loss for the train and test data compared, this looks pretty solid. This can be read from the plots by looking at how close the plotted curve for the train- and test data is to each other - for my plots they are almost identical, which means that the model doesn't seem to be neither over- nor underfitting, which is great! 
 
 
 
