@@ -120,9 +120,9 @@ This function takes the previously defined model, makes predictions on the test 
     H = model.fit(X_train, y_train,
                   validation_data = (X_test, y_test),
                   batch_size = 128,
-                  epochs = 1,
+                  epochs = 10,
                   verbose = 1) 
-    plot_history(H,1)
+    plot_history(H,10)
     predictions = model.predict(X_test, batch_size = 128)
     report = classification_report(y_test.argmax(axis=1),
                                    predictions.argmax(axis=1),
