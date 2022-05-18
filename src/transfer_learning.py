@@ -135,7 +135,7 @@ This function takes the previously defined model, makes predictions on the test 
     
 def main():
     """
-The main function defines which functions to run, when the script is run from the terminal. Further this main function includes the training of the model on the training data, and the evaluation of the model.  
+The main function defines which functions to run, when the script is run from the terminal.   
     """
     (X_train, y_train), (X_test, y_test), labels = load_and_process_data()
     model = define_model()
