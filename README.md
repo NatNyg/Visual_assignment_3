@@ -6,21 +6,21 @@ This script performs Transfer Learning on the CIFAR-10 dataset. This means that 
 
 ### Method 
 As mentioned this way of performing classification tasks gets rid of the way we usually normalize - this means that all I've done with the data in this script is load it, split it and normalize it by dividing it by 255. After doing this I just binarize my labels, and then the data is ready for the pretrained VGG16 model to perform the transfer learning. 
-I then use keras from tensorflow to define the model and that I don't want the to train the layers, as this would defeat the purpose of the transfer learning. After having defined and saved my new model, I use Scikit-learn to make a classification report, which is then saved to my "out" folder. I also save a figure of the plotted accuracy and loss of the model on the training vs testing data.
+I then use keras from tensorflow to define the model and that I don't want the to train the layers, as this would defeat the purpose of the transfer learning. The script further allows the user to input initial learning rate and batch size for defining and evaluating the model. After having defined and saved my new model, I use Scikit-learn to make a classification report, which is then saved to my "out" folder. I also save a figure of the plotted accuracy and loss of the model on the training vs testing data.
 
 ### Usage
 In order to reproduce my results, a few steps has to be followed:
 
 1) Install the relevant packages - the list of the prerequisites for the script can be found in the requirements.txt
 2) Make sure to place the script in the "src" folder. The data used in my code (cifar10) is fetched from tensorflow using the load_data() so nothing has to go into the in-folder. Had you wanted to use the script on a similar dataset, you would have to change up the loading of the data part of the script and place the data in the "in" folder. For this script using the cifar10 dataset, however, the "in" folder is redundant.
-3) Run the script from the terminal. Make sure that you are in the main folder when excecuting by typing in "python src/transfer_learning.py"
+3) Run the script from the terminal. Remember to pass the required arguments (-lr (learning rate) and -bs (batchsize)). Make sure that you are in the main folder when excecuting by typing in "python src/transfer_learning.py"
 
 This should give you approximately the same results as I have gotten in the "out" folder. 
 
 
 ### Results
 The results of this script is actually not as good as I would have first expected, considering my previous results when I did the same task using CNN’s, and where I achieved a maximum score of 57%. For the transfer learning I gain a maximum precision score around 60% and a minimum around 40% this doesn't seem like the perfect classification tool, although I would have expected a bigger increase in accuracy when comparing the two methods. 
-This could be a matter of redefining the parameters (e.g. learning rate, batch size, etc.), in order to optimize the model. This is something that could be fiddled around with, in order to find the most optimal parameters for the model performance. Also, I am only running it for 10 epochs - if this number was extended the results could also potentially increase in accuracy. Bearing in mind that we are classifying on ten labels though, the accuracy is pretty good.
+This could be a matter of redefining the parameters (e.g. learning rate, batch size, etc.), in order to optimize the model. This is something that could be fiddled around with, in order to find the most optimal parameters for the model performance, which is easy since you pass the arguments for batchsize and initial learning rate straight from the commandline. My results are for a batchsize of 128 and an initial learning rate on 0.01, but this could be alternated.  Also, I am only running it for 10 epochs - if this number was extended the results could also potentially increase in accuracy. Bearing in mind that we are classifying on ten labels though, the accuracy is pretty good.
 Looking at the saved plots of the accuracy and loss for the train and test data compared, this looks pretty solid. This can be read from the plots by looking at how close the plotted curve for the train- and test data is to each other - for my plots they are almost identical, which means that the model doesn't seem to be neither over- nor underfitting, which is great! 
 
 
